@@ -11,4 +11,4 @@ This application is written in Kotlin and uses an MVVM architecture with the fol
 - Retrofit and OkHttp for networking
 - Dagger Hilt for Dependency Injection
 - Clean architecture; MVVM architecture for the Presentation layer
-- In the case of IOExceptions when fetching currency data from the API, we retry upto 3 times with an expoential backoff(exponentially increasing delay between network request retries)
+- In the case of IOExceptions when fetching currency data from the API, we retry upto 3 times with an exponential backoff(exponentially increasing delay between network request retries)
