@@ -21,7 +21,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.lloydsbanking.lloydstest.data.model.CurrencyItem
@@ -82,8 +81,7 @@ fun ListOfCurrencies(
 ) {
     LazyColumn(
         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
-        verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = Modifier.testTag("123")  // TODO: testing, write test to check tag
+        verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
         items(
             items = currencies,
@@ -135,7 +133,7 @@ fun ErrorView(errorMessage: String?) {
         modifier = Modifier
             .size(100.dp)
             .background(Color.White, shape = RoundedCornerShape(8.dp))
-            .fillMaxSize(), // TODO: remove comment - else dialog will stay top start centered
+            .fillMaxSize(),
     ) {
         RegularTextComponent(errorMessage ?: "Error fetching latest currency rates")
     }
