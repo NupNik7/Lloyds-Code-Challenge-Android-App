@@ -63,61 +63,52 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
 
     // Compose UI
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-
-    // shimmer animation for xml
-    implementation("com.faltenreich:skeletonlayout:5.0.0")
+    implementation(libs.material)
+    implementation(libs.androidx.constraintlayout.v214)
 
     // Compose
     val composeBom = platform("androidx.compose:compose-bom:2024.05.00")
     implementation(composeBom)
     androidTestImplementation(composeBom)
 
-    val composeVersion = "1.6.6"
-
     // Material Design 3
-    implementation("androidx.compose.material3:material3")
+    implementation(libs.androidx.material3)
 
     // Compose UI
-    implementation("androidx.compose.ui:ui:$composeVersion")
-    implementation("androidx.compose.foundation:foundation:$composeVersion")
-    implementation("androidx.compose.ui:ui-text:$composeVersion")
+    implementation(libs.androidx.ui)
+    implementation(libs.androidx.foundation)
+    implementation(libs.androidx.ui.text)
 
     // Android Studio Preview support
-    implementation("androidx.compose.ui:ui-tooling-preview:$composeVersion")
-    debugImplementation("androidx.compose.ui:ui-tooling:$composeVersion")
+    implementation(libs.androidx.ui.tooling.preview)
+    debugImplementation(libs.androidx.ui.tooling)
 
-    // UI Tests
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    debugImplementation("androidx.compose.ui:ui-test-manifest")
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.compiler)
+    kapt(libs.androidx.hilt.compiler)
 
-    implementation("androidx.activity:activity-compose:1.9.3")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.1")
-    implementation("androidx.activity:activity-ktx:1.9.3")
+    // Networking
+    implementation(libs.retrofit)
+    implementation(libs.okhttp)
+    implementation(libs.gson)
+    implementation(libs.converter.gson)
 
-    // hilt
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("com.google.dagger:hilt-compiler:2.51.1")
-    kapt("androidx.hilt:hilt-compiler:1.2.0")
-
-    // networking
-    implementation("com.squareup.retrofit2:retrofit:2.10.0")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("com.squareup.retrofit2:converter-gson:2.10.0")
-
-    // testing
+    // Unit Testing
+    testImplementation(libs.core.testing)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     testImplementation(libs.mockito.core)
-    testImplementation("org.mockito:mockito-inline:3.11.2")
+    testImplementation(libs.mockito.inline)
 
-    // coroutines testing
+    // UI Tests
+    androidTestImplementation(libs.androidx.ui.test.junit4)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.activity.ktx)
+
+    // Coroutines Testing
     testImplementation(libs.kotlinx.coroutines.test)
-    //testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutines_version"
     testImplementation(libs.turbine)
-
-    testImplementation(libs.core.testing)
 }
