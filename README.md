@@ -1,4 +1,4 @@
-# Lloyds Banking Code Challennge Application
+# Lloyds Banking Code Challenge Application
 
 ![lloyds_banking_short_demo](https://github.com/user-attachments/assets/57047ad3-0b90-43e3-8b30-05cbde157f9c)
 
