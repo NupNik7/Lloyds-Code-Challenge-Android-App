@@ -25,7 +25,7 @@ import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.lloydsbanking.lloydstest.data.model.CurrencyItem
-import com.lloydsbanking.lloydstest.ui.RegularTextComponent
+import com.lloydsbanking.lloydstest.ui.components.RegularTextComponent
 
 /**
  * Compose screen of list of currencies provided by CurrenciesListViewModel.

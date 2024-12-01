@@ -1,4 +1,4 @@
-package com.lloydsbanking.lloydstest.ui
+package com.lloydsbanking.lloydstest.ui.components
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
